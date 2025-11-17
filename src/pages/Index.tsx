@@ -60,38 +60,6 @@ const Index = () => {
             </AlertDescription>
           </Alert>
 
-          {/* CTA Section */}
-          <div 
-            ref={ctaSection.ref}
-            className={`transition-all duration-700 ${
-              ctaSection.isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-10'
-            }`}
-          >
-            <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-muted-foreground">
-              Lavendel Engine is being built in the open. Star the repository, report bugs, or contribute to the codebase as we build this together.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-purple to-cyan hover:opacity-90 text-white shadow-lg shadow-purple/25 transition-all duration-300 hover:scale-105"
-              >
-                <Github className="mr-2 h-5 w-5" />
-                View on GitHub
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-border hover:bg-secondary/50 backdrop-blur transition-all duration-300 hover:scale-105"
-              >
-                <Eye className="mr-2 h-5 w-5" />
-                Watch Progress
-              </Button>
-            </div>
-
             {/* Current Development Status */}
             <div className="text-center">
               <p className="text-sm text-muted-foreground mb-3">Current Development Status</p>
@@ -331,6 +299,38 @@ const Index = () => {
         </div>
       </section>
 
+{/* CTA Section */}
+          <div 
+            ref={ctaSection.ref}
+            className={`transition-all duration-700 ${
+              ctaSection.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}
+          >
+            <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-muted-foreground">
+              Lavendel Engine is being built in the open. Star the repository, report bugs, or contribute to the codebase as we build this together.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-purple to-cyan hover:opacity-90 text-white shadow-lg shadow-purple/25 transition-all duration-300 hover:scale-105"
+              >
+                <Github className="mr-2 h-5 w-5" />
+                View on GitHub
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-border hover:bg-secondary/50 backdrop-blur transition-all duration-300 hover:scale-105"
+              >
+                <Eye className="mr-2 h-5 w-5" />
+                Watch Progress
+              </Button>
+            </div>
+  
       {/* Footer */}
       <footer className="py-16 px-6 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto">
