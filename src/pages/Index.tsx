@@ -36,9 +36,10 @@ const Index = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-center text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            A vision for a high-performance C++ game engine with Vulkan rendering, C# scripting, 
-            and modern ECS architecture. This represents what we're working towards.
+          <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+            <span className="bg-gradient-to-r from-purple-400 to-purple-500 bg-clip-text text-transparent">
+              Lavendel Engine is being built in the open. Star the repository, report bugs, or contribute to the codebase as we build this together.
+            </span>
           </p>
 
           {/* Alert Box */}
@@ -264,19 +265,120 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-muted-foreground mb-4">
-            Lavendel Engine is an open-source project in early development
-          </p>
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
+      <footer className="py-16 px-6 border-t border-border bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            {/* Brand Column */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-primary"></div>
+                <h3 className="text-xl font-bold text-foreground">Lavendel Engine</h3>
+              </div>
+              <p className="text-muted-foreground text-sm mb-4">
+                An ambitious game engine project in early development.
+              </p>
+              <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-warning/30 bg-warning/10">
+                <AlertTriangle className="w-4 h-4 text-warning" />
+                <span className="text-xs text-warning font-medium">
+                  Pre-Alpha - Most features not yet implemented
+                </span>
+              </div>
+            </div>
+
+            {/* Resources Column */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Resources</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Documentation (Coming Soon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    API Reference (Coming Soon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Tutorials (Coming Soon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Examples (Coming Soon)
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Community Column */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Community</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Discord (Coming Soon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Forum (Coming Soon)
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Twitter (Coming Soon)
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Project Column */}
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-4">Project</h3>
+              <ul className="space-y-3">
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Roadmap
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Development Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    Contributing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    BSD 3-Clause License
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2025 Lavendel Engine. Licensed under BSD 3-Clause.
+            </p>
+            <a 
+              href="https://github.com/the0hdDev/lavendel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Github className="w-5 h-5" />
-              GitHub
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-2">
-              <ExternalLink className="w-5 h-5" />
-              Documentation
             </a>
           </div>
         </div>
