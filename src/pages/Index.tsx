@@ -26,18 +26,18 @@ const Index = () => {
 
           {/* Main Heading */}
           <div className="text-center mb-6">
-            <h1 className="text-7xl md:text-8xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-purple-400 via-primary to-purple-500 bg-clip-text text-transparent inline-block">
+            <h1 className="text-7xl md:text-8xl font-bold mb-4 animate-fade-in">
+              <span className="bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent inline-block">
                 Lavendel
               </span>
               <br />
-              <span className="text-foreground">Engine</span>
+              <span className="bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent">Engine</span>
             </h1>
           </div>
 
           {/* Subtitle */}
-          <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
-            <span className="bg-gradient-to-r from-purple-400 to-purple-500 bg-clip-text text-transparent">
+          <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed animate-fade-in">
+            <span className="bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">
               Lavendel Engine is being built in the open. Star the repository, report bugs, or contribute to the codebase as we build this together.
             </span>
           </p>
@@ -83,7 +83,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-transparent to-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Planned Features</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Planned Features</h2>
             <p className="text-muted-foreground text-lg mb-6">
               Our roadmap for what Lavendel Engine aims to become
             </p>
@@ -134,7 +134,7 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Planned Technology Stack</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Planned Technology Stack</h2>
             <p className="text-muted-foreground text-lg mb-4">
               The technologies we plan to use for building Lavendel Engine
             </p>
@@ -144,7 +144,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Core Engine */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Core Engine</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Core Engine</h3>
               <div className="space-y-3">
                 <TechBadge name="C++20" status="planned" description="Modern C++ with latest features" />
                 <TechBadge name="EnTT" status="planned" description="Fast ECS framework" />
@@ -154,7 +154,7 @@ const Index = () => {
 
             {/* Graphics */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Graphics</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Graphics</h3>
               <div className="space-y-3">
                 <TechBadge name="Vulkan" status="in-progress" description="Modern graphics API" />
                 <TechBadge name="SPIR-V" status="planned" description="Shader compilation" />
@@ -164,7 +164,7 @@ const Index = () => {
 
             {/* Scripting */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Scripting</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Scripting</h3>
               <div className="space-y-3">
                 <TechBadge name="C#" status="planned" description="Primary scripting language" />
                 <TechBadge name="Mono" status="planned" description="Runtime environment" />
@@ -174,7 +174,7 @@ const Index = () => {
 
             {/* Physics */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Physics</h3>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Physics</h3>
               <div className="space-y-3">
                 <TechBadge name="Box2D" status="planned" description="2D physics simulation" />
                 <TechBadge name="Jolt" status="planned" description="3D physics engine" />
@@ -185,7 +185,7 @@ const Index = () => {
 
           {/* Platform Support */}
           <div className="mt-12 p-6 rounded-xl border border-border bg-card">
-            <h3 className="text-xl font-bold mb-4">Target Platforms:</h3>
+            <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Target Platforms:</h3>
             <div className="flex flex-wrap gap-3">
               <span className="px-4 py-2 rounded-lg bg-secondary text-foreground font-medium">Windows</span>
               <span className="px-4 py-2 rounded-lg bg-secondary text-foreground font-medium">Linux</span>
@@ -200,7 +200,7 @@ const Index = () => {
       <section className="py-20 px-6 bg-gradient-to-b from-card/30 to-transparent">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Building from Source</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Building from Source</h2>
             <p className="text-muted-foreground text-lg mb-4">
               Compile Lavendel Engine on your platform
             </p>
@@ -219,7 +219,7 @@ const Index = () => {
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary font-bold">
                   01
                 </span>
-                <h3 className="text-xl font-bold">Clone Repository</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Clone Repository</h3>
               </div>
               <p className="text-muted-foreground mb-4">Download the source code from GitHub</p>
               <div className="p-4 rounded-lg bg-code-bg border border-border font-mono text-sm overflow-x-auto">
@@ -235,7 +235,7 @@ const Index = () => {
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary font-bold">
                   02
                 </span>
-                <h3 className="text-xl font-bold">Generate Visual Studio Solution</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Generate Visual Studio Solution</h3>
               </div>
               <p className="text-muted-foreground mb-4">Create Visual Studio 2022 project files</p>
               <div className="p-4 rounded-lg bg-code-bg border border-border font-mono text-sm overflow-x-auto">
@@ -251,7 +251,7 @@ const Index = () => {
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary font-bold">
                   03
                 </span>
-                <h3 className="text-xl font-bold">Build Project</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Build Project</h3>
               </div>
               <p className="text-muted-foreground mb-4">Compile the engine</p>
               <div className="p-4 rounded-lg bg-code-bg border border-border font-mono text-sm overflow-x-auto">
@@ -272,7 +272,7 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-primary"></div>
-                <h3 className="text-xl font-bold text-foreground">Lavendel Engine</h3>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Lavendel Engine</h3>
               </div>
               <p className="text-muted-foreground text-sm mb-4">
                 An ambitious game engine project in early development.
@@ -287,7 +287,7 @@ const Index = () => {
 
             {/* Resources Column */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Resources</h3>
+              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Resources</h3>
               <ul className="space-y-3">
                 <li>
                   <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
@@ -314,7 +314,7 @@ const Index = () => {
 
             {/* Community Column */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Community</h3>
+              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Community</h3>
               <ul className="space-y-3">
                 <li>
                   <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
@@ -341,7 +341,7 @@ const Index = () => {
 
             {/* Project Column */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Project</h3>
+              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Project</h3>
               <ul className="space-y-3">
                 <li>
                   <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
