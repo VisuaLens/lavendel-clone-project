@@ -3,12 +3,20 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TechBadge } from "@/components/TechBadge";
 import { CodePreview } from "@/components/CodePreview";
-import { Github, AlertTriangle, ExternalLink } from "lucide-react";
+import { Github, AlertTriangle, ExternalLink, Eye } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Index = () => {
+  const featuresSection = useScrollAnimation();
+  const techSection = useScrollAnimation();
+  const buildSection = useScrollAnimation();
+  const ctaSection = useScrollAnimation();
+  
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground"
+      style={{ scrollBehavior: 'smooth' }}
+    >
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
@@ -52,18 +60,56 @@ const Index = () => {
             </AlertDescription>
           </Alert>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-purple-500 to-primary hover:from-purple-600 hover:to-primary/90 text-white shadow-lg shadow-primary/25"
-            >
-              <Github className="mr-2 h-5 w-5" />
-              View Progress on GitHub
-            </Button>
-            <Button size="lg" variant="outline" className="border-border hover:bg-secondary">
-              Follow Development
-            </Button>
+          {/* CTA Section */}
+          <div 
+            ref={ctaSection.ref}
+            className={`transition-all duration-700 ${
+              ctaSection.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-10'
+            }`}
+          >
+            <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-muted-foreground">
+              Lavendel Engine is being built in the open. Star the repository, report bugs, or contribute to the codebase as we build this together.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-purple to-cyan hover:opacity-90 text-white shadow-lg shadow-purple/25 transition-all duration-300 hover:scale-105"
+              >
+                <Github className="mr-2 h-5 w-5" />
+                View on GitHub
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-border hover:bg-secondary/50 backdrop-blur transition-all duration-300 hover:scale-105"
+              >
+                <Eye className="mr-2 h-5 w-5" />
+                Watch Progress
+              </Button>
+            </div>
+
+            {/* Current Development Status */}
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground mb-3">Current Development Status</p>
+              <div className="flex flex-wrap justify-center gap-4 text-xs">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-warning"></div>
+                  <span className="text-muted-foreground">Core Architecture: Planning</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-cyan"></div>
+                  <span className="text-muted-foreground">Vulkan Renderer: In Progress</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-destructive"></div>
+                  <span className="text-muted-foreground">Features: Not Implemented</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Feature Badges */}
@@ -80,7 +126,14 @@ const Index = () => {
       </section>
 
       {/* Planned Features Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-card/30">
+      <section 
+        ref={featuresSection.ref}
+        className={`py-20 px-6 bg-gradient-to-b from-transparent to-card/30 transition-all duration-1000 ${
+          featuresSection.isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Planned Features</h2>
@@ -131,7 +184,14 @@ const Index = () => {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="py-20 px-6">
+      <section 
+        ref={techSection.ref}
+        className={`py-20 px-6 transition-all duration-1000 delay-200 ${
+          techSection.isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Planned Technology Stack</h2>
@@ -197,7 +257,14 @@ const Index = () => {
       </section>
 
       {/* Building from Source Section */}
-      <section className="py-20 px-6 bg-gradient-to-b from-card/30 to-transparent">
+      <section 
+        ref={buildSection.ref}
+        className={`py-20 px-6 bg-gradient-to-b from-card/30 to-transparent transition-all duration-1000 delay-300 ${
+          buildSection.isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-20'
+        }`}
+      >
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent animate-fade-in">Building from Source</h2>
