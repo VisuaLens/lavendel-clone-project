@@ -36,7 +36,7 @@ const Index: React.FC = () => {
 
           {/* Main Heading */}
           <div className="text-center mb-6">
-            <h1 className="text-7xl md:text-8xl font-bold mb-4 animate-fade-in">
+            <h1 className="text-8xl md:text-9xl lg:text-[10rem] font-bold mb-4 animate-fade-in">
               <span className="bg-gradient-to-r from-purple via-primary to-cyan bg-clip-text text-transparent inline-block">
                 Lavendel
               </span>
@@ -360,12 +360,12 @@ const Index: React.FC = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-primary"></div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Lavendel Engine</h3>
+                <h1 className="text-[] font-bold bg-gradient-to-r from-purple to-cyan bg-clip-text text-transparent">Lavendel Engine</h1>
               </div>
               <p className="text-muted-foreground text-sm mb-4">An ambitious game engine project in early development.</p>
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg border border-warning/30 bg-warning/10">
                 <AlertTriangle className="w-4 h-4 text-warning" />
-                <span className="text-xs text-warning font-medium">Pre-Alpha - Most features not yet implemented</span>
+                <span className="text-xl text-warning font-medium">Pre-Alpha - Most features not yet implemented</span>
               </div>
             </div>
 
