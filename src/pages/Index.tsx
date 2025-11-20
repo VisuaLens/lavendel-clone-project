@@ -4,6 +4,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TechBadge } from "@/components/TechBadge";
 import { CodePreview } from "@/components/CodePreview";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Github, AlertTriangle, Eye } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -19,6 +20,7 @@ const Index: React.FC = () => {
       className="min-h-screen bg-background text-foreground"
       style={{ scrollBehavior: "smooth" }}
     >
+      <ThemeToggle />
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
